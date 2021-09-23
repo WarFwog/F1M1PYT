@@ -6,11 +6,8 @@ Type "help", "copyright", "credits" or "license()" for more information.
 30
 >>> 100 - 10
 90
->>> 25/ 5
+>>> 25 / 5
 5.0
->>>  10 / 3
- 
-SyntaxError: unexpected indent
 >>> 10 / 3
 3.3333333333333335
 >>> 10 // 3
@@ -27,8 +24,8 @@ Br
 >>> print(naam[::-1])
 nairB
 >>> leeftijd = 17
->>> print('hallo ' + naam + 'ben je al ' + str(leeftijd) + ' jaar?')
-hallo Brianben je al 17 jaar?
+>>> print('Hallo ' + naam + ' ben je al ' + str(leeftijd) + ' jaar?')
+Hallo Brian ben je al 17 jaar?
 >>> leeftijd = leeftijd + 1
 >>> leeftijd
 18
@@ -36,15 +33,49 @@ hallo Brianben je al 17 jaar?
 >>> leeftijd
 17
 >>> if leeftijd < 18:
-	hoelang tot18jaar = 18 - leeftijd
+    hoelang_tot18jaar = 18 - leeftijd
+    print('Over ' + str(hoelang_tot18jaar) + ' jaar wordt je 18')
+
+    
+Over 1 jaar wordt je 18
+>>> elif leeftijd > 18:
+    hoelang_al18jaar = leeftijd - 18
+    print('Het is alweer ' + str(hoelang_al18jaar) + ' jaar geleden dat je 18 werd ;-)')
+    
+SyntaxError: invalid syntax
+>>> 
+>>> elif leeftijd > 18:
+    hoelang_al18jaar = leeftijd - 18
+    print('Het is alweer ' + str(hoelang_al18jaar) + ' jaar geleden dat je 18 werd ;-)')
+    
+SyntaxError: invalid syntax
+>>> if leeftijd < 18:
+	hoelang_tot18jaar = 18 - leeftijd
+	print('Over ' + str(hoelang_tot18jaar) + ' jaar wordt je 18')
+
+	
+Over 1 jaar wordt je 18
+>>> elif leeftijd > 18:
 	
 SyntaxError: invalid syntax
+>>> elif leeftijd > 18
+SyntaxError: invalid syntax
+>>> elif leeftijd > 18:
+	
+SyntaxError: invalid syntax
+>>> if leeftijd <18:
+	hoelang_tot18jaar = 18 - leeftijd
+	print('Over ' + str(hoelang_tot18jaar) + ' jaar wordt je 18'))
+elif leeftijd > 18:
+	hoelang_al18jaar = leeftijd - 18
+	
+SyntaxError: unmatched ')'
 >>> if leeftijd < 18:
 	hoelang_tot18jaar = 18 - leeftijd
 	print('over ' + str(hoelang_tot18jaar) + ' jaar wordt je 18')
 elif leeftijd > 18:
 	hoelang_al18jaar = leeftijd - 18
-	print('het is alweer ' + str(hoelang_al18jaar) + ' jaar geleden dat je 18 werd ;-)')
+	print('Het is alweer ' + str(hoelang_al18jaar) + ' jaar geleden dat je 18 werd ;-)')
 else:
 	print('Je bent precies ' + str(leeftijd) + ' jaar')
 
@@ -52,35 +83,25 @@ else:
 over 1 jaar wordt je 18
 >>> from random import randint
 >>> randint(0,1000)
-18
+384
 >>> willekeurig_getal = randint(0,1000)
->>> wikkekeurig_getal
-Traceback (most recent call last):
-  File "<pyshell#34>", line 1, in <module>
-    wikkekeurig_getal
-NameError: name 'wikkekeurig_getal' is not defined
->>> willekerig_getal
-Traceback (most recent call last):
-  File "<pyshell#35>", line 1, in <module>
-    willekerig_getal
-NameError: name 'willekerig_getal' is not defined
 >>> willekeurig_getal
-388
->>> print('wikkekeurig getal tussen 0 en 1000: ' + str(willekeurig_getal))
-wikkekeurig getal tussen 0 en 1000: 388
+847
+>>> print('Willekeurig getal tussen 0 en 1000: ' + str(willekeurig_getal))
+Willekeurig getal tussen 0 en 1000: 847
 >>> from datetime import datetime
 >>> datum = datetime.now()
 >>> print(datum)
-2021-09-17 12:39:01.496728
+2021-09-23 13:00:59.663013
 >>> datum.strftime('%A %d %B %Y')
-'Friday 17 September 2021'
+'Thursday 23 September 2021'
 >>> import locale
->>> locale.setlocale(locale.LC_TIME, 'nL_NL')
-'nL_NL'
+>>> locale.setlocale(locale.LC_TIME, 'nl_NL')
+'nl_NL'
 >>> datum.strftime('%A %d %B %Y')
-'vrijdag 17 september 2021'
+'donderdag 23 september 2021'
 >>> locale.setlocale(locale.LC_TIME, 'it_IT')
 'it_IT'
 >>> datum.strftime('%A %d %B %Y')
-'venerdì 17 settembre 2021'
+'giovedì 23 settembre 2021'
 >>> 
